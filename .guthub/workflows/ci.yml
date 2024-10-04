@@ -1,17 +1,17 @@
 name: "Sample React CI Pipeline / Workflow"
 
 on:
-  push:
-    branches:
-        - main
-        - master
+    push:
+        branches:
+            - main
+            - master
 
 jobs:
-  build-and-test:
-    runs-on: windows-latest
+    build-and-test:
+        runs-on: windows-latest
 
-    steps:
-        - name: "Setup Node JS"
-          uses: actions/setup-node@v4
-          with:
-            node-version: '21'
+        steps:
+            - name: "Setup Node JS"
+              uses: actions/setup-node@v4
+              with:
+                node-version: '21'
