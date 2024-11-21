@@ -21,7 +21,7 @@ pipeline {
             agent {
                 docker {
                     image 'node:22.11.0-alpine3.20'
-                    args '-u Aayushsingh2002'
+                    args '-u root'
                     reuseNode true // Reuse the node for the next stages
                 }
             }
@@ -42,7 +42,7 @@ pipeline {
             agent {
                 docker {
                     image 'node:22.11.0-alpine3.20'
-                    args '-u Aayushsingh2001'
+                    args '-u root'
                     reuseNode true //Reuse the node for the next stages
                 }
             }
