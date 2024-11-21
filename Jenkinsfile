@@ -10,19 +10,16 @@ pipeline {
                 }
             }
             steps {
-                step {
-                    cleanWs()
-                }
-                step {
-                    sh '''
-                        ls -l
-                        node --version
-                        npm --version
-                        npm install
-                        npm run build
-                        ls -l
-                    '''
-                }
+                cleanWs()
+            
+                sh '''
+                    ls -l
+                    node --version
+                    npm --version
+                    npm install
+                    npm run build
+                    ls -l
+                '''       
             }
         }
     }
