@@ -24,7 +24,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                 name: build
-                run-id: ${{ guthub.event.workflow_run.id }}
+                run-id: ${{ github.event.workflow_run.id }}
                 github-token: ${{ github.token }}
 
             - name: "Deploy to vercel"
