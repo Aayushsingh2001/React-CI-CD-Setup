@@ -5,6 +5,7 @@ on:
         workflows: ["Sample React CI Pipeline / workflow"]
         types:
             - completed
+    workflow_dispatch:
 
 jobs:
     deploy:
@@ -28,4 +29,4 @@ jobs:
                 github-token: ${{ github.token }}
 
             - name: "Deploy to vercel"
-              run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --cicdproject
+              run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --name=cicdproject
