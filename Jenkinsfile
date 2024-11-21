@@ -50,6 +50,7 @@ pipeline {
             steps {
                 sh '''
                     npm run test
+                    test -f dist/index.html
                 '''
             }
         }
