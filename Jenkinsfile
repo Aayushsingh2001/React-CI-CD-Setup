@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+    environment {
+        MY_VAR = 'my value'
+    }
+
     options {
         skipDefaultCheckout(true)
     }
@@ -65,6 +70,7 @@ pipeline {
             steps {
                 sh'''
                     npm install -g vercel
+                    echo $MY_VAR
                 '''
             }
         }
